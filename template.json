@@ -1,1 +1,4 @@
-{}
+{
+  "vue": "https://github.com/Jim-Elijah/jim-cli-vue-template.git",
+  "react": "https://github.com/Jim-Elijah/jim-cli-react-template.git"
+}

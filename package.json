@@ -1,28 +1,39 @@
 {
   "name": "jim-cli",
-  "version": "1.0.0",
-  "description": "scaffold for managing tempalte and init project",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "scaffold for managing template and initializing project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "cm": "bin/cm",
-    "cm-add": "bin/cm-add",
-    "cm-delete": "bin/cm-delete",
-    "cm-list": "bin/cm-list",
-    "cm-init": "bin/cm-init"
+    "jim": "bin/jim.mjs",
+    "jim-cli": "bin/jim.mjs"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cli",
+    "scaffold",
+    "prompts",
+    "commander"
+  ],
+  "author": "Jim-Elijah",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jim-Elijah/jim-cli.git"
+  },
   "license": "ISC",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
-    "chalk": "^4.1.2",
-    "cli-table": "^0.3.6",
-    "commander": "^2.19.0",
-    "download-git-repo": "^1.1.0",
-    "inquirer": "^6.2.2",
-    "log-symbols": "^4.0.0",
-    "ora": "^3.2.0"
+    "@inquirer/prompts": "^7.8.0",
+    "chalk": "5.4.1",
+    "commander": "14.0.0",
+    "download-git-repo": "3.0.0",
+    "easy-table": "^1.2.0",
+    "log-symbols": "7.0.0",
+    "ora": "8.1.1",
+    "validate-npm-package-name": "^6.0.2"
   }
 }
