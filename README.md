@@ -40,7 +40,6 @@ The latest template is:
 name  url
 ----  ------------------------------------------------------
 vue   https://github.com/Jim-Elijah/jim-cli-vue-template.git
-
 ```
 
 ## jim-cli delete
@@ -57,7 +56,6 @@ The latest template is:
 name   url
 -----  --------------------------------------------------------
 react  https://github.com/Jim-Elijah/jim-cli-react-template.git
-└──────┴──────────────────────────────────────────────────┘
 ```
 
 ## jim-cli list
