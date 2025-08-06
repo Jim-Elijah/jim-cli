@@ -1,16 +1,20 @@
 {
   "name": "jim-cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "description": "scaffold for managing template and initializing project",
-  "main": "index.js",
+  "main": "bin/jim.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "jim": "bin/jim.mjs",
     "jim-cli": "bin/jim.mjs"
   },
+  "files": [
+    "bin",
+    "lib",
+    "template.json"
+  ],
   "keywords": [
     "cli",
     "scaffold",

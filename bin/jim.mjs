@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 import { program } from "commander"
-import { readPackageJSON } from "../lib/util/version.mjs" 
+import { readPackageJSON } from "../lib/util/version.mjs"
 
 const packageJSON = await readPackageJSON()
 
-program.usage('<command>')
-
-program.version(packageJSON.version)
+program
+  .name('jim-cli')
+  .version(packageJSON.version)
+  .usage('<command>');
 
 program
   .command('add')
