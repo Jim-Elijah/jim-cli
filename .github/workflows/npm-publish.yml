@@ -12,11 +12,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 10
       - uses: actions/setup-node@v4
+        name: Install Node.js
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
