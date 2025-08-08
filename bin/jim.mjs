@@ -1,47 +1,47 @@
 #!/usr/bin/env node
-import { program } from "commander"
-import { readPackageJSON } from "../lib/util/version.mjs"
+import { program } from 'commander';
+import { readPackageJSON } from '../lib/util/version.mjs';
 
-const packageJSON = await readPackageJSON()
+const packageJSON = await readPackageJSON();
 
-program
-  .name('jim-cli')
-  .version(packageJSON.version)
-  .usage('<command>');
+let action;
+let bb;
+
+program.name('jim-cli').version(packageJSON.version).usage('<command>');
 
 program
   .command('add')
   .alias('a')
   .description('add a new template')
   .action(() => {
-    import('../lib/add.mjs')
-  })
+    import('../lib/add.mjs');
+  });
 
 program
   .command('delete')
   .alias('d')
   .description('delete a template')
   .action(() => {
-    import('../lib/delete.mjs')
-  })
+    import('../lib/delete.mjs');
+  });
 
 program
   .command('list')
   .alias('l')
   .description('list templates')
   .action(() => {
-    import('../lib/list.mjs')
-  })
+    import('../lib/list.mjs');
+  });
 
 program
   .command('init')
   .alias('i')
   .description('init a project')
   .action(() => {
-    import('../lib/init.mjs')
-  })
+    import('../lib/init.mjs');
+  });
 
-program.parse(process.argv)
+program.parse(process.argv);
 
 // catch ctrl + c exit
 process.on('uncaughtException', (error) => {

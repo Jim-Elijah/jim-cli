@@ -1,0 +1,4 @@
+npx --no -- commitlint --edit $1
+
+# notice: pnpm to run commitlint not work
+# pnpm dlx commitlint --edit \$1
