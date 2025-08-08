@@ -1,13 +1,14 @@
 {
   "name": "jim-cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "scaffold for managing template and initializing project",
   "main": "bin/jim.mjs",
   "scripts": {
     "prepare": "husky",
     "lint": "eslint . --ext .js,.mjs --fix",
-    "format": "prettier . --write --ignore-unknown"
+    "format": "prettier . --write --ignore-unknown",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "lint-staged": {
     "!*.{js,mjs}": [
@@ -49,6 +50,7 @@
     "easy-table": "^1.2.0",
     "log-symbols": "7.0.0",
     "ora": "8.1.1",
+    "semver": "^7.7.2",
     "validate-npm-package-name": "^6.0.2"
   },
   "devDependencies": {
@@ -56,6 +58,7 @@
     "@babel/eslint-parser": "^7.28.0",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "conventional-changelog-cli": "^5.0.0",
     "eslint": "8.57",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^10.1.8",

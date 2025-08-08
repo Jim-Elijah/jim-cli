@@ -26,5 +26,6 @@ module.exports = {
     'no-control-regex': 1,
     'no-await-in-loop': 1,
     'import/extensions': [2, { js: 'never', json: 'always', mjs: 'always' }],
+    'no-shadow': 1,
   },
 };
