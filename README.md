@@ -4,6 +4,9 @@ This is a simple scaffold to help you create projects with predefined templates.
 ## Installation
 
 ```javascript
+# pnpm (recommended)
+pnpm add jim-cli -g
+# npm
 npm install jim-cli -g
 ```
 
